@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>徐永然 - 课程顾问简历</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #49627a;
+      --accent: #d9a441;
+      --text: #24313d;
+      --muted: #607182;
+      --line: #d7dde4;
+      --bg: #f4f6f8;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: A4;
+      margin: 0.55in;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(217, 164, 65, 0.18), transparent 28%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(960px, calc(100vw - 32px));
+      margin: 24px auto;
+      background: var(--card);
+      box-shadow: 0 18px 48px rgba(33, 46, 60, 0.12);
+      border: 1px solid rgba(44, 62, 80, 0.08);
+    }
+
+    .hero {
+      padding: 36px 40px 28px;
+      background: linear-gradient(135deg, #2c3e50 0%, #40576d 60%, #5a7187 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -90px -90px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(217, 164, 65, 0.18);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+
+    .hero .target {
+      margin-top: 8px;
+      font-size: 17px;
+      color: #eef3f7;
+      letter-spacing: 2px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 18px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contact span {
+      white-space: nowrap;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+    }
+
+    aside {
+      padding: 28px 26px 34px;
+      background: var(--bg);
+      border-right: 1px solid var(--line);
+    }
+
+    main {
+      padding: 28px 30px 36px;
+    }
+
+    section {
+      page-break-inside: avoid;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: var(--primary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 17px;
+      color: var(--primary);
+    }
+
+    .subhead {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .summary {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .pill-list,
+    .compact-list,
+    .achievement-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pill-list li {
+      display: inline-block;
+      margin: 0 8px 8px 0;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e4ebf1;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .compact-list li,
+    .achievement-list li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .compact-list li::before,
+    .achievement-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .experience-item {
+      margin-bottom: 18px;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-item .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: 4px 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border: 1px solid rgba(44, 62, 80, 0.14);
+      color: var(--secondary);
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+    }
+
+    .edu-item {
+      margin-bottom: 14px;
+    }
+
+    .note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--accent);
+      background: #fbf8f1;
+      font-size: 13px;
+      color: #556371;
+    }
+
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+      }
+
+      .hero,
+      aside,
+      main {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="hero">
+      <h1>徐永然</h1>
+      <div class="target">课程顾问 / 咨询顾问</div>
+      <div class="contact">
+        <span>18813156485</span>
+        <span>zgrbsbf@126.com</span>
+        <span>硕士学历</span>
+        <span>10年工作经验</span>
+      </div>
+    </header>
+
+    <div class="content">
+      <aside>
+        <section>
+          <h2>核心优势</h2>
+          <ul class="compact-list">
+            <li>擅长通过沟通快速理解需求、定位问题，并输出可执行方案。</li>
+            <li>长期承担跨团队协作、项目推进与客户需求对接工作，具备稳定的服务意识和跟进能力。</li>
+            <li>具备强目标感与结果导向思维，习惯用数据、流程和节奏管理推进转化。</li>
+            <li>学习能力强，能在短时间内掌握新行业知识、产品规则与客户沟通话术。</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>岗位匹配</h2>
+          <ul class="pill-list">
+            <li>客户需求诊断</li>
+            <li>学习方案匹配</li>
+            <li>长期跟进维护</li>
+            <li>服务体验优化</li>
+            <li>数据复盘分析</li>
+            <li>跨团队沟通</li>
+            <li>高压下推进执行</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>教育背景</h2>
+          <div class="edu-item">
+            <h3>北京航空航天大学</h3>
+            <div class="subhead">软件工程 硕士 | 2013 - 2016</div>
+          </div>
+          <div class="edu-item">
+            <h3>内蒙古大学</h3>
+            <div class="subhead">信息与计算科学 本科 | 2009 - 2013</div>
+          </div>
+        </section>
+
+        <section>
+          <h2>补充信息</h2>
+          <ul class="compact-list">
+            <li>有较强的结构化表达能力，能够把复杂信息解释给不同背景的用户。</li>
+            <li>适应业务变化快、节奏快的工作环境，能持续跟进并维护客户关系。</li>
+            <li>对教育咨询、语言培训及职业发展类服务方向有明确兴趣。</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main>
+        <section>
+          <h2>个人概述</h2>
+          <p class="summary">
+            具有 10 年以上工作经验，长期在复杂业务场景中承担需求沟通、方案拆解、项目推进与问题解决工作。虽然过往岗位以互联网和技术研发为主，但核心能力始终围绕“理解用户诉求、分析问题、匹配解决方案、持续跟进并推动结果落地”。具备较强的沟通表达、逻辑分析、服务意识和学习能力，现希望转向课程顾问岗位，在教育与培训场景中发挥咨询与转化能力。
+          </p>
+          <div class="note">
+            简历内容基于既有真实经历重构，重点突出客户沟通、方案制定、进度跟进、数据分析与结果导向等可迁移能力。
+          </div>
+        </section>
+
+        <section>
+          <h2>工作经历</h2>
+
+          <article class="experience-item">
+            <h3>前端开发工程师 | 白熊智数（北京）科技有限公司</h3>
+            <div class="meta">
+              <span>2024.07 - 至今</span>
+              <span>互联网 / AI 业务</span>
+            </div>
+            <ul class="achievement-list">
+              <li>参与公司主营业务与 AI 产品模块落地，持续与业务、产品、设计等角色沟通需求，拆解问题并推动执行方案落地。</li>
+              <li>在需求不完整或用户反馈不清晰的情况下，能够快速梳理核心诉求，明确优先级并输出可执行路径。</li>
+              <li>指导初级工程师和实习生开展工作，具备带教、解释复杂内容和建立协作信任的经验。</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">需求分析</span>
+              <span class="tag">方案沟通</span>
+              <span class="tag">跟进推进</span>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <h3>全栈工程师 | Capix.Inc</h3>
+            <div class="meta">
+              <span>2025.06 - 2025.10</span>
+              <span>远程兼职 / 海外团队协作</span>
+            </div>
+            <ul class="achievement-list">
+              <li>与 CTO 紧密协作推进 AI 产品设计与功能实现，围绕订阅、Credit 等模块反复确认业务目标与用户使用路径。</li>
+              <li>在跨时区、远程协作环境中保持高频沟通，确保信息同步、问题闭环和交付结果达成。</li>
+              <li>从用户体验和转化路径角度参与模块优化，具备围绕结果持续调整策略的工作习惯。</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">客户视角</span>
+              <span class="tag">转化意识</span>
+              <span class="tag">结果导向</span>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <h3>全栈工程师 | 沈阳明瞩科技有限公司</h3>
+            <div class="meta">
+              <span>2022.01 - 2024.01</span>
+              <span>创业项目 / 外包客户项目</span>
+            </div>
+            <ul class="achievement-list">
+              <li>负责创业项目及外包客户项目开发，直接面对不同类型需求方，理解业务差异并匹配不同解决方案。</li>
+              <li>在有限资源条件下协调项目节奏，处理需求变化、交付风险和客户预期，保证项目持续推进。</li>
+              <li>积累了较强的沟通耐心、问题拆解能力和服务意识，能够在复杂情境下稳定推进合作关系。</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">客户沟通</span>
+              <span class="tag">方案匹配</span>
+              <span class="tag">关系维护</span>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <h3>前端开发工程师 | 小米科技有限责任公司</h3>
+            <div class="meta">
+              <span>2019.07 - 2021.09</span>
+              <span>联名卡与权益业务</span>
+            </div>
+            <ul class="achievement-list">
+              <li>参与联名卡申请、权益中心、权益领取等核心业务模块建设，熟悉围绕用户流程进行问题定位与体验优化。</li>
+              <li>配合后端处理性能与流程问题，重视用户使用体验、响应效率和过程细节。</li>
+              <li>参与后台系统相关工作，积累了对业务流程、数据指标和执行效率的系统化理解。</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">用户体验</span>
+              <span class="tag">流程优化</span>
+              <span class="tag">数据意识</span>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <h3>前端开发工程师 | 人人行科技股份有限公司 / 乐视网</h3>
+            <div class="meta">
+              <span>2015.05 - 2019.06</span>
+              <span>企业后台 / 视频业务 / 系统平台</span>
+            </div>
+            <ul class="achievement-list">
+              <li>长期参与企业后台、监控系统、上线系统等多类业务，习惯在复杂场景中与多角色协作并推进任务完成。</li>
+              <li>处理过系统监控、数据统计、发布与回滚等工作，对过程管理、风险控制和结果复盘有较强意识。</li>
+              <li>工作中形成了细致、稳定、抗压的职业习惯，能够持续承担高要求、高节奏任务。</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">抗压执行</span>
+              <span class="tag">过程管理</span>
+              <span class="tag">持续复盘</span>
+            </div>
+          </article>
+        </section>
+
+        <section>
+          <h2>与课程顾问岗位的相关匹配</h2>
+          <ul class="achievement-list">
+            <li>能够快速理解客户背景、问题和目标，并把复杂信息转化成清晰的沟通表达。</li>
+            <li>有方案型工作经验，擅长根据不同需求给出个性化路径，而不是模板化回应。</li>
+            <li>具备持续跟进意识，适合通过回访、复盘和节奏管理推动客户关系维护与结果达成。</li>
+            <li>硕士学历，学习速度快，适合快速补齐语言考试、课程体系和移民政策相关知识。</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>技能与能力</h2>
+          <ul class="achievement-list">
+            <li>沟通与表达：需求访谈、信息澄清、复杂内容解释、跨角色协作。</li>
+            <li>方案与推进：问题拆解、方案制定、执行跟进、过程管理。</li>
+            <li>分析与优化：数据观察、流程优化、用户体验改进、复盘总结。</li>
+            <li>职业素质：责任心强、学习能力强、执行力稳定、适应快节奏环境。</li>
+          </ul>
+        </section>
+
+        <div class="footer">
+          此版本为课程顾问岗位定制 HTML 简历，可直接浏览、继续修改或通过浏览器打印为 PDF。
+        </div>
+      </main>
+    </div>
+  </article>
+</body>
+</html>
